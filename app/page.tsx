@@ -9,10 +9,8 @@ const SCORES = [
 
 const LABELED: Record<number, { delta: string; type: string; below?: boolean }> = {
   1: { delta: "+6", type: "title_rewrite" },
-  5: { delta: "+8", type: "description_restructure" },
-  7: { delta: "+4", type: "metafield_add" },
-  9: { delta: "+6", type: "title_rewrite", below: true },
-  11: { delta: "+4", type: "tags_update" },
+  5: { delta: "+8", type: "description_restructure", below: true },
+  9: { delta: "+4", type: "metafield_add", below: true },
 };
 
 export default function Page() {

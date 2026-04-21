@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #070809;
+  --bg: #0d1117;
   --surface: #0f1012;
   --surface-2: #141618;
   --border: #1e2124;
@@ -1461,7 +1461,7 @@ button {
 
 .chart-exp-label {
   position: absolute;
-  transform: translate(8px, calc(-100% - 10px));
+  transform: translate(8px, calc(-100% - 16px));
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 12px;
@@ -1471,7 +1471,7 @@ button {
 }
 
 .chart-exp-label.below {
-  transform: translate(8px, 12px);
+  transform: translate(8px, 18px);
 }
 
 .chart-end-label {
@@ -1558,17 +1558,18 @@ button {
 
 .chart-bottom-brand {
   font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 14px;
   color: #f0f0f0;
   line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .chart-bottom-tagline {
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 11px;
-  color: #4b5563;
+  color: #6b7280;
   line-height: 1;
 }
 
