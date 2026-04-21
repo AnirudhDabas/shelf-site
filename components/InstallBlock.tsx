@@ -7,7 +7,7 @@ export default function InstallBlock({ className }: { className?: string }) {
 
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText("npx shelf init");
+      await navigator.clipboard.writeText("npx shelf-ai init");
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
@@ -20,7 +20,7 @@ export default function InstallBlock({ className }: { className?: string }) {
       <div className="install-cmd">
         <span className="t-dollar">$</span>
         <span className="t-npx">npx</span>
-        <span className="t-shelf">shelf</span>
+        <span className="t-shelf">shelf-ai</span>
         <span className="t-init">init</span>
       </div>
       <button

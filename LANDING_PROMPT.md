@@ -29,7 +29,7 @@ Real demo numbers: a test store went from 30/100 to 68/100
 AI Shelf Score in one session, 25 iterations, ~$2 API cost.
 
 GitHub: https://github.com/AnirudhDabas/shelf
-Install: npx shelf init
+Install: npx shelf-ai init
 
 Built by: Anirudh Dabas, CS student at University of Waterloo
 Inspired by: Andrej Karpathy's autoresearch (@karpathy) and 
@@ -329,7 +329,7 @@ Line-height: 1.7
 
 **Install block:**
 ```
-$ npx shelf init          [copy]
+$ npx shelf-ai init          [copy]
 ```
 Background: var(--surface)
 Border: 1px solid var(--border)

@@ -94,7 +94,7 @@ export default function Page() {
   }
   const handleCopy = useCallback(() => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText("npx shelf init").catch(() => {});
+      navigator.clipboard.writeText("npx shelf-ai init").catch(() => {});
     }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -347,7 +347,7 @@ export default function Page() {
             <span className="chart-bottom-cmd-text">
               <span style={{ color: "#374151" }}>$</span>
               <span style={{ color: "#9ca3af" }}>{" npx "}</span>
-              <span style={{ color: "#f0f0f0", fontWeight: 600 }}>shelf</span>
+              <span style={{ color: "#f0f0f0", fontWeight: 600 }}>shelf-ai</span>
               <span style={{ color: "#22c55e" }}>{" init"}</span>
             </span>
             <button
