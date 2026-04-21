@@ -10,7 +10,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "shelf — autoresearch for storefronts",
+  title: "shelf autoresearch for storefronts",
   description:
     "An autonomous agent that tunes your Shopify catalog until ChatGPT and Perplexity actually recommend you.",
   openGraph: {
