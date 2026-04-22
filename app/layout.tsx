@@ -21,12 +21,21 @@ export const metadata: Metadata = {
     url: "https://shelf-site.vercel.app",
     siteName: "shelf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "shelf — autoresearch for storefronts",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "shelf — autoresearch for storefronts",
     description:
       "An autonomous agent that tunes your Shopify catalog until ChatGPT and Perplexity actually recommend you.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: {
