@@ -2,6 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+const INSTALL_CMD = "npx shelf-ai init";
+const INSTALL_PARTS = INSTALL_CMD.split(" ");
+
 const SCORES = [
   30, 36, 36, 40, 42, 50, 50, 54, 54, 58, 60, 62, 62, 64, 64, 66, 66, 66, 68,
   68, 68, 68, 68, 68, 68, 68,
@@ -66,8 +69,8 @@ export default function Page() {
     }
 
     at(3100, () => setEndLabelOn(true));
-    at(3600, () => setBottomOn(true));
-    at(3900, () => setTopOn(true));
+    at(0, () => setBottomOn(true));
+    at(0, () => setTopOn(true));
 
     return () => timers.forEach(clearTimeout);
   }, [size.w, size.h]);
@@ -94,7 +97,7 @@ export default function Page() {
   }
   const handleCopy = useCallback(() => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText("npx shelf-ai init").catch(() => {});
+      navigator.clipboard.writeText(INSTALL_CMD).catch(() => {});
     }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -129,6 +132,10 @@ export default function Page() {
               height={size.h}
               style={{ position: "absolute", inset: 0, display: "block" }}
             >
+              <title>
+                AI Shelf Score climbing from 30 to 68 over 25 optimization
+                iterations
+              </title>
               <defs>
                 <clipPath id="chart-reveal" clipPathUnits="userSpaceOnUse">
                   <rect
@@ -233,7 +240,7 @@ export default function Page() {
                       cy={cy}
                       r={isMobile ? 4 : 5}
                       fill="#22c55e"
-                      stroke="#070809"
+                      stroke="#0d1117"
                       strokeWidth={2}
                     />
                   </g>
@@ -314,7 +321,7 @@ export default function Page() {
             <div
               className={`chart-end-label${endLabelOn ? " shown" : ""}`}
               style={{
-                left: xFor(25),
+                left: Math.min(xFor(25), size.w - 30),
                 top: yFor(68),
                 opacity: endLabelOn ? 1 : 0,
               }}
@@ -346,9 +353,11 @@ export default function Page() {
           <div className="chart-bottom-cmd">
             <span className="chart-bottom-cmd-text">
               <span style={{ color: "#374151" }}>$</span>
-              <span style={{ color: "#9ca3af" }}>{" npx "}</span>
-              <span style={{ color: "#f0f0f0", fontWeight: 600 }}>shelf-ai</span>
-              <span style={{ color: "#22c55e" }}>{" init"}</span>
+              <span style={{ color: "#9ca3af" }}>{` ${INSTALL_PARTS[0]} `}</span>
+              <span style={{ color: "#f0f0f0", fontWeight: 600 }}>
+                {INSTALL_PARTS[1]}
+              </span>
+              <span style={{ color: "#22c55e" }}>{` ${INSTALL_PARTS[2]}`}</span>
             </span>
             <button
               type="button"

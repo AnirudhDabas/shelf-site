@@ -10,15 +10,23 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "shelf autoresearch for storefronts",
+  metadataBase: new URL("https://shelf-site.vercel.app"),
+  title: "shelf — autoresearch for storefronts",
   description:
     "An autonomous agent that tunes your Shopify catalog until ChatGPT and Perplexity actually recommend you.",
   openGraph: {
     title: "shelf",
     description: "autoresearch for storefronts",
+    // TODO: update to custom domain
     url: "https://shelf-site.vercel.app",
     siteName: "shelf",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "shelf — autoresearch for storefronts",
+    description:
+      "An autonomous agent that tunes your Shopify catalog until ChatGPT and Perplexity actually recommend you.",
   },
   icons: {
     icon: {
@@ -26,7 +34,7 @@ export const metadata: Metadata = {
         "data:image/svg+xml," +
         encodeURIComponent(
           "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>" +
-            "<rect width='32' height='32' fill='#070809'/>" +
+            "<rect width='32' height='32' fill='#0d1117'/>" +
             "<circle cx='16' cy='16' r='8' fill='#22c55e'/>" +
             "</svg>"
         ),
@@ -36,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#070809",
+  themeColor: "#0d1117",
   width: "device-width",
   initialScale: 1,
 };

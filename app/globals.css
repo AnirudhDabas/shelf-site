@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --bg: #0d1117;
   --surface: #0f1012;
@@ -1296,7 +1294,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: #070809;
+  background: #0d1117;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1404,7 +1402,7 @@ button {
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 13px;
-  color: #4b5563;
+  color: #8b949e;
   transition: color 150ms ease;
 }
 
@@ -1546,7 +1544,7 @@ button {
 .chart-bottom-meta {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: #374151;
+  color: #6b7280;
 }
 
 .chart-bottom-center {
@@ -1612,20 +1610,20 @@ button {
 .chart-bottom-sub {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: #374151;
+  color: #6b7280;
 }
 
 .chart-bottom-credits {
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 11px;
-  color: #374151;
+  color: #6b7280;
   text-align: center;
   line-height: 1.5;
 }
 
 .chart-credits-link {
-  color: #4b5563;
+  color: #8b949e;
   text-decoration: none;
   transition: color 150ms ease, text-decoration 150ms ease;
 }
@@ -1646,7 +1644,7 @@ button {
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 11px;
-  color: #4b5563;
+  color: #8b949e;
   transition: color 150ms ease;
 }
 
